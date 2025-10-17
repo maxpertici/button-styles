@@ -52,11 +52,11 @@ $states : (
             // All colors
             $selector-list: (
 
-                ".wp-block-button:not([class*=is-style]).has-button-color--#{$tint} .wp-block-button__link",
-                ".wp-block-button.is-style-#{$block_style}.has-button-color--#{$tint} .wp-block-button__link",
+                ".wp-block-button:not([class*=is-style]).has-button-color-#{$tint} .wp-block-button__link",
+                ".wp-block-button.is-style-#{$block_style}.has-button-color-#{$tint} .wp-block-button__link",
 
-                ".wp-block-button:not([class*=is-style]).has-button-color--#{$tint} .wp-block-button__link",
-                ".wp-block-button.is-style-#{$block_style}.has-button-color--#{$tint} .wp-block-button__link"
+                ".wp-block-button:not([class*=is-style]).has-button-color-#{$tint} .wp-block-button__link",
+                ".wp-block-button.is-style-#{$block_style}.has-button-color-#{$tint} .wp-block-button__link"
             );
             $selector : list.join( $selector-list, ', ' );
             
@@ -65,12 +65,12 @@ $states : (
                 $selector-list: (
 
                     ".wp-block-button:not([class*=is-style]) .wp-block-button__link",
-                    ".wp-block-button:not([class*=is-style]).has-button-color--#{$tint} .wp-block-button__link",
+                    ".wp-block-button:not([class*=is-style]).has-button-color-#{$tint} .wp-block-button__link",
 
                     ".wp-block-button:not([class*=is-style]) .wp-block-button__link",
-                    ".wp-block-button:not([class*=is-style]).has-button-color--#{$tint} .wp-block-button__link",
+                    ".wp-block-button:not([class*=is-style]).has-button-color-#{$tint} .wp-block-button__link",
                     ".wp-block-button.is-style-#{$block_style} .wp-block-button__link",
-                    ".wp-block-button.is-style-#{$block_style}.has-button-color--#{$tint} .wp-block-button__link"
+                    ".wp-block-button.is-style-#{$block_style}.has-button-color-#{$tint} .wp-block-button__link"
                 );
                 $selector : list.join( $selector-list, ', ' );
             }
@@ -133,7 +133,7 @@ $states : (
             
             // All colors
             $selector-list: (
-                ".wp-block-button.is-style-#{$block_style}.has-button-color--#{$tint} .wp-block-button__link"
+                ".wp-block-button.is-style-#{$block_style}.has-button-color-#{$tint} .wp-block-button__link"
             );
             $selector : list.join( $selector-list, ', ' );
             
@@ -141,7 +141,7 @@ $states : (
             @if( "button-primary" == $tint ) { 
                 $selector-list: (
                     ".wp-block-button.is-style-#{$block_style} .wp-block-button__link",
-                    ".wp-block-button.is-style-#{$block_style}.has-button-color--#{$tint} .wp-block-button__link"
+                    ".wp-block-button.is-style-#{$block_style}.has-button-color-#{$tint} .wp-block-button__link"
                 );
                 $selector : list.join( $selector-list, ', ' );
             }
@@ -202,7 +202,7 @@ $states : (
 
             // All colors
             $selector-list: (
-                ".wp-block-button:not(.has-icon).is-style-#{$block_style}.has-button-color--#{$tint} .wp-block-button__link"
+                ".wp-block-button:not(.has-icon).is-style-#{$block_style}.has-button-color-#{$tint} .wp-block-button__link"
             );
             $selector : list.join( $selector-list, ', ' );
             
@@ -210,7 +210,7 @@ $states : (
             @if( "button-primary" == $tint ) { 
                 $selector-list: (
                     ".wp-block-button:not(.has-icon).is-style-#{$block_style} .wp-block-button__link",
-                    ".wp-block-button:not(.has-icon).is-style-#{$block_style}.has-button-color--#{$tint} .wp-block-button__link"
+                    ".wp-block-button:not(.has-icon).is-style-#{$block_style}.has-button-color-#{$tint} .wp-block-button__link"
                 );
                 $selector : list.join( $selector-list, ', ' );
             }

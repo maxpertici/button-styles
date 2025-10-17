@@ -28,7 +28,7 @@ function addClasses( BlockListBlock ) {
 
 		const classes = classnames( props?.className, {
 			'has-button-color' : attributes?.buttonColor,
-			[ `has-button-color--${ attributes?.buttonColorName }` ]: attributes?.buttonColorName,
+			[ `has-button-color-${ attributes?.buttonColorName }` ]: attributes?.buttonColorName,
 		} );
 
 		return <BlockListBlock { ...props } className={ classes } />;

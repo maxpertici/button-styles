@@ -115,7 +115,7 @@ final class App extends Plugin {
 
 		if ( $p->next_tag() ) {
 			$p->add_class( 'has-button-color' );
-			$p->add_class( 'has-button-color--' . $buttonColorName );
+			$p->add_class( 'has-button-color-' . $buttonColorName );
 		}
 
 		$block_content = $p->get_updated_html();
