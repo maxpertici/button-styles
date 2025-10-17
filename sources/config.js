@@ -7,6 +7,7 @@
 const { __ } = require('@wordpress/i18n');
 
 const whiteColor      = '#ffffff';
+const darkWhiteColor  = '#eeeeee';
 const blackColor      = '#111111';
 const lightBlackColor = '#333333';
 
@@ -81,10 +82,10 @@ const buttonStyles = {
                 "textDecoration"  : "none",
             },
             "hover": {
-                "color"           : lightBlackColor,
-                "borderColor"     : whiteColor,
-                "backgroundColor" : whiteColor,
-                "boxShadowColor"  : whiteColor,
+                "color"           : blackColor,
+                "borderColor"     : darkWhiteColor,
+                "backgroundColor" : darkWhiteColor,
+                "boxShadowColor"  : darkWhiteColor,
                 "textDecoration"  : "underline",
             }
         },
@@ -99,8 +100,8 @@ const buttonStyles = {
                 "textDecoration"  : "none",
             },
             "hover" : {
-                "color"           : whiteColor,
-                "borderColor"     : whiteColor,
+                "color"           : darkWhiteColor,
+                "borderColor"     : darkWhiteColor,
                 "backgroundColor" : "transparent",
                 "boxShadowColor"  : "transparent",
                 "textDecoration"  : "underline",
@@ -117,7 +118,7 @@ const buttonStyles = {
                 "textDecoration"  : "underline",
             },
             "hover" : {
-                "color"           : whiteColor,
+                "color"           : darkWhiteColor,
                 "borderColor"     : "transparent",
                 "backgroundColor" : "transparent",
                 "boxShadowColor"  : "transparent",
