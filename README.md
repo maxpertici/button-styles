@@ -4,7 +4,7 @@
 A WordPress plugin that adds unified styles to Gutenberg button blocks.
 
 ## Overview
-This plugin provides a way to manage button styles for handling nicely the hover colors and block styles for your different users' needs.
+This plugin provides a way to manage button styles for handling hover colors and block styles nicely for your different users' needs.
 You can therefore create and manage button styles with:
 * Block Styles
 * CSS Styles and theme.json
@@ -25,18 +25,6 @@ The plugin includes by default:
 - **Primary**: Default black style
 - **Secondary**: Alternative white style
 
-### Style Structure
-Styles are configured in `/sources/config.js` with the following structure:
-```javascript
-"button-[tint]": {
-    "fill": {
-        "link": { /* styles for normal state */ },
-        "hover": { /* styles for hover state */ }
-    },
-    "outline": { /* same structure */ },
-    "as-link": { /* same structure */ }
-}
-```
 
 ### Customization
 To add new styles:
@@ -51,4 +39,7 @@ To add new styles:
 3. Follow the same naming and structure conventions as existing styles
 4. Adapt `/sources/scss/button-styles.scss` for your needs
 5. Run the build process `npm run build`
-6. Your custom styles are available for the contributors
+6. Your custom styles are available for contributors
+
+### N.B.:
+At this moment, the default style and default color MUST BE fill and primary.
