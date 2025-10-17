@@ -14,13 +14,10 @@ const lightBlackColor = '#333333';
 const buttonStyles = {
 
     "primary": {
-
         "label": __( 'Primary', 'button-styles' ),
-
         "styles" : {
 
             "fill" : {
-
                 "link" : {
                     "color"           : whiteColor,
                     "borderColor"     : blackColor,
@@ -38,7 +35,6 @@ const buttonStyles = {
             },
 
             "outline" : {
-
                 "link" : {
                     "color"           : blackColor,
                     "borderColor"     : blackColor,
@@ -56,7 +52,6 @@ const buttonStyles = {
             },
 
             "as-link" : {
-
                 "link" : {
                     "color"           : blackColor,
                     "borderColor"     : "transparent",
@@ -77,9 +72,7 @@ const buttonStyles = {
     },
 
     "secondary": {
-
         "label": __( 'Secondary', 'button-styles' ),
-
         "styles" : {
             
             "fill" : {
@@ -100,7 +93,6 @@ const buttonStyles = {
             },
 
             "outline" : {
-
                 "link" : {
                     "color"           : whiteColor,
                     "borderColor"     : whiteColor,
@@ -118,7 +110,6 @@ const buttonStyles = {
             },
 
             "as-link" : {
-
                 "link" : {
                     "color"           : whiteColor,
                     "borderColor"     : "transparent",
