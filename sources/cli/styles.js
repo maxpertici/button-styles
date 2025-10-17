@@ -5,7 +5,7 @@
 
 const { consola } = require("consola");
 consola.start("RUN   : make:styles");
-consola.info("BUILD : Generate editor button styles library (scss)");
+consola.info("BUILD : Generate editor button styles...");
 
 const fs = require('fs');
 const path = require('path');

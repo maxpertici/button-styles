@@ -1,6 +1,6 @@
 /**
  * The following files are generated with CLI :
- * — button-styles.build.scss
+ * — button-styles-collection.build.scss
  *
  * Do not edit them manually, they will be overwritten.
  * For adding new styles, please update config.js.
@@ -84,10 +84,10 @@ $button_styles : (
                 textDecoration : none,
             ),
             hover : (
-                color : #333333,
-                borderColor : #ffffff,
-                backgroundColor : #ffffff,
-                boxShadowColor : #ffffff,
+                color : #111111,
+                borderColor : #eeeeee,
+                backgroundColor : #eeeeee,
+                boxShadowColor : #eeeeee,
                 textDecoration : underline,
             ),
         ),
@@ -100,8 +100,8 @@ $button_styles : (
                 textDecoration : none,
             ),
             hover : (
-                color : #ffffff,
-                borderColor : #ffffff,
+                color : #eeeeee,
+                borderColor : #eeeeee,
                 backgroundColor : transparent,
                 boxShadowColor : transparent,
                 textDecoration : underline,
@@ -116,7 +116,7 @@ $button_styles : (
                 textDecoration : underline,
             ),
             hover : (
-                color : #ffffff,
+                color : #eeeeee,
                 borderColor : transparent,
                 backgroundColor : transparent,
                 boxShadowColor : transparent,
