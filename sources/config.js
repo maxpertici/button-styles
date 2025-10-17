@@ -13,118 +13,128 @@ const lightBlackColor = '#333333';
 
 const buttonStyles = {
 
-    "button-primary": {
+    "primary": {
 
-        "fill" : {
+        "label": __( 'Primary', 'button-styles' ),
 
-            "link" : {
-                "color"           : whiteColor,
-                "borderColor"     : blackColor,
-                "backgroundColor" : blackColor,
-                "boxShadowColor"  : blackColor,
-                "textDecoration"  : "none",
+        "styles" : {
+
+            "fill" : {
+
+                "link" : {
+                    "color"           : whiteColor,
+                    "borderColor"     : blackColor,
+                    "backgroundColor" : blackColor,
+                    "boxShadowColor"  : blackColor,
+                    "textDecoration"  : "none",
+                },
+                "hover" : {
+                    "color"           : whiteColor,
+                    "borderColor"     : lightBlackColor,
+                    "backgroundColor" : lightBlackColor,
+                    "boxShadowColor"  : lightBlackColor,
+                    "textDecoration"  : "underline",
+                }
             },
-            "hover" : {
-                "color"           : whiteColor,
-                "borderColor"     : lightBlackColor,
-                "backgroundColor" : lightBlackColor,
-                "boxShadowColor"  : lightBlackColor,
-                "textDecoration"  : "underline",
-            }
-        },
 
-        "outline" : {
+            "outline" : {
 
-            "link" : {
-                "color"           : blackColor,
-                "borderColor"     : blackColor,
-                "backgroundColor" : "transparent",
-                "boxShadowColor"  : "transparent",
-                "textDecoration"  : "none",
+                "link" : {
+                    "color"           : blackColor,
+                    "borderColor"     : blackColor,
+                    "backgroundColor" : "transparent",
+                    "boxShadowColor"  : "transparent",
+                    "textDecoration"  : "none",
+                },
+                "hover" : {
+                    "color"           : lightBlackColor,
+                    "borderColor"     : lightBlackColor,
+                    "backgroundColor" : "transparent",
+                    "boxShadowColor"  : "transparent",
+                    "textDecoration"  : "underline",
+                }
             },
-            "hover" : {
-                "color"           : lightBlackColor,
-                "borderColor"     : lightBlackColor,
-                "backgroundColor" : "transparent",
-                "boxShadowColor"  : "transparent",
-                "textDecoration"  : "underline",
-            }
-        },
 
-        "as-link" : {
+            "as-link" : {
 
-            "link" : {
-                "color"           : blackColor,
-                "borderColor"     : "transparent",
-                "backgroundColor" : "transparent",
-                "boxShadowColor"  : "transparent",
-                "textDecoration"  : "underline",
-            },
-            "hover" : {
-                "color"           : lightBlackColor,
-                "borderColor"     : "transparent",
-                "backgroundColor" : "transparent",
-                "boxShadowColor"  : "transparent",
-                "textDecoration"  : "none",
+                "link" : {
+                    "color"           : blackColor,
+                    "borderColor"     : "transparent",
+                    "backgroundColor" : "transparent",
+                    "boxShadowColor"  : "transparent",
+                    "textDecoration"  : "underline",
+                },
+                "hover" : {
+                    "color"           : lightBlackColor,
+                    "borderColor"     : "transparent",
+                    "backgroundColor" : "transparent",
+                    "boxShadowColor"  : "transparent",
+                    "textDecoration"  : "none",
+                }
             }
         },
 
     },
 
-    "button-secondary": {
+    "secondary": {
 
-        "fill" : {
-            "link": {
-                "color"           : blackColor,
-                "borderColor"     : whiteColor,
-                "backgroundColor" : whiteColor,
-                "boxShadowColor"  : whiteColor,
-                "textDecoration"  : "none",
+        "label": __( 'Secondary', 'button-styles' ),
+
+        "styles" : {
+            
+            "fill" : {
+                "link": {
+                    "color"           : blackColor,
+                    "borderColor"     : whiteColor,
+                    "backgroundColor" : whiteColor,
+                    "boxShadowColor"  : whiteColor,
+                    "textDecoration"  : "none",
+                },
+                "hover": {
+                    "color"           : blackColor,
+                    "borderColor"     : darkWhiteColor,
+                    "backgroundColor" : darkWhiteColor,
+                    "boxShadowColor"  : darkWhiteColor,
+                    "textDecoration"  : "underline",
+                }
             },
-            "hover": {
-                "color"           : blackColor,
-                "borderColor"     : darkWhiteColor,
-                "backgroundColor" : darkWhiteColor,
-                "boxShadowColor"  : darkWhiteColor,
-                "textDecoration"  : "underline",
-            }
-        },
 
-        "outline" : {
+            "outline" : {
 
-            "link" : {
-                "color"           : whiteColor,
-                "borderColor"     : whiteColor,
-                "backgroundColor" : "transparent",
-                "boxShadowColor"  : "transparent",
-                "textDecoration"  : "none",
+                "link" : {
+                    "color"           : whiteColor,
+                    "borderColor"     : whiteColor,
+                    "backgroundColor" : "transparent",
+                    "boxShadowColor"  : "transparent",
+                    "textDecoration"  : "none",
+                },
+                "hover" : {
+                    "color"           : darkWhiteColor,
+                    "borderColor"     : darkWhiteColor,
+                    "backgroundColor" : "transparent",
+                    "boxShadowColor"  : "transparent",
+                    "textDecoration"  : "underline",
+                }
             },
-            "hover" : {
-                "color"           : darkWhiteColor,
-                "borderColor"     : darkWhiteColor,
-                "backgroundColor" : "transparent",
-                "boxShadowColor"  : "transparent",
-                "textDecoration"  : "underline",
-            }
-        },
 
-        "as-link" : {
+            "as-link" : {
 
-            "link" : {
-                "color"           : whiteColor,
-                "borderColor"     : "transparent",
-                "backgroundColor" : "transparent",
-                "boxShadowColor"  : "transparent",
-                "textDecoration"  : "underline",
-            },
-            "hover" : {
-                "color"           : darkWhiteColor,
-                "borderColor"     : "transparent",
-                "backgroundColor" : "transparent",
-                "boxShadowColor"  : "transparent",
-                "textDecoration"  : "none",
+                "link" : {
+                    "color"           : whiteColor,
+                    "borderColor"     : "transparent",
+                    "backgroundColor" : "transparent",
+                    "boxShadowColor"  : "transparent",
+                    "textDecoration"  : "underline",
+                },
+                "hover" : {
+                    "color"           : darkWhiteColor,
+                    "borderColor"     : "transparent",
+                    "backgroundColor" : "transparent",
+                    "boxShadowColor"  : "transparent",
+                    "textDecoration"  : "none",
+                }
             }
-        },
+        }
     },
 }
 

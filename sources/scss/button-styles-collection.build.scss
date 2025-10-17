@@ -24,103 +24,109 @@ $button_block_styles : (
 );
 
 $button_styles : (
-    button-primary : (
-        fill : (
-            link : (
-                color : #ffffff,
-                borderColor : #111111,
-                backgroundColor : #111111,
-                boxShadowColor : #111111,
-                textDecoration : none,
+    primary : (
+        label : Primary,
+        styles : (
+            fill : (
+                link : (
+                    color : #ffffff,
+                    borderColor : #111111,
+                    backgroundColor : #111111,
+                    boxShadowColor : #111111,
+                    textDecoration : none,
+                ),
+                hover : (
+                    color : #ffffff,
+                    borderColor : #333333,
+                    backgroundColor : #333333,
+                    boxShadowColor : #333333,
+                    textDecoration : underline,
+                ),
             ),
-            hover : (
-                color : #ffffff,
-                borderColor : #333333,
-                backgroundColor : #333333,
-                boxShadowColor : #333333,
-                textDecoration : underline,
+            outline : (
+                link : (
+                    color : #111111,
+                    borderColor : #111111,
+                    backgroundColor : transparent,
+                    boxShadowColor : transparent,
+                    textDecoration : none,
+                ),
+                hover : (
+                    color : #333333,
+                    borderColor : #333333,
+                    backgroundColor : transparent,
+                    boxShadowColor : transparent,
+                    textDecoration : underline,
+                ),
             ),
-        ),
-        outline : (
-            link : (
-                color : #111111,
-                borderColor : #111111,
-                backgroundColor : transparent,
-                boxShadowColor : transparent,
-                textDecoration : none,
-            ),
-            hover : (
-                color : #333333,
-                borderColor : #333333,
-                backgroundColor : transparent,
-                boxShadowColor : transparent,
-                textDecoration : underline,
-            ),
-        ),
-        as-link : (
-            link : (
-                color : #111111,
-                borderColor : transparent,
-                backgroundColor : transparent,
-                boxShadowColor : transparent,
-                textDecoration : underline,
-            ),
-            hover : (
-                color : #333333,
-                borderColor : transparent,
-                backgroundColor : transparent,
-                boxShadowColor : transparent,
-                textDecoration : none,
+            as-link : (
+                link : (
+                    color : #111111,
+                    borderColor : transparent,
+                    backgroundColor : transparent,
+                    boxShadowColor : transparent,
+                    textDecoration : underline,
+                ),
+                hover : (
+                    color : #333333,
+                    borderColor : transparent,
+                    backgroundColor : transparent,
+                    boxShadowColor : transparent,
+                    textDecoration : none,
+                ),
             ),
         ),
     ),
-    button-secondary : (
-        fill : (
-            link : (
-                color : #111111,
-                borderColor : #ffffff,
-                backgroundColor : #ffffff,
-                boxShadowColor : #ffffff,
-                textDecoration : none,
+    secondary : (
+        label : Secondary,
+        styles : (
+            fill : (
+                link : (
+                    color : #111111,
+                    borderColor : #ffffff,
+                    backgroundColor : #ffffff,
+                    boxShadowColor : #ffffff,
+                    textDecoration : none,
+                ),
+                hover : (
+                    color : #111111,
+                    borderColor : #eeeeee,
+                    backgroundColor : #eeeeee,
+                    boxShadowColor : #eeeeee,
+                    textDecoration : underline,
+                ),
             ),
-            hover : (
-                color : #111111,
-                borderColor : #eeeeee,
-                backgroundColor : #eeeeee,
-                boxShadowColor : #eeeeee,
-                textDecoration : underline,
+            outline : (
+                link : (
+                    color : #ffffff,
+                    borderColor : #ffffff,
+                    backgroundColor : transparent,
+                    boxShadowColor : transparent,
+                    textDecoration : none,
+                ),
+                hover : (
+                    color : #eeeeee,
+                    borderColor : #eeeeee,
+                    backgroundColor : transparent,
+                    boxShadowColor : transparent,
+                    textDecoration : underline,
+                ),
             ),
-        ),
-        outline : (
-            link : (
-                color : #ffffff,
-                borderColor : #ffffff,
-                backgroundColor : transparent,
-                boxShadowColor : transparent,
-                textDecoration : none,
-            ),
-            hover : (
-                color : #eeeeee,
-                borderColor : #eeeeee,
-                backgroundColor : transparent,
-                boxShadowColor : transparent,
-                textDecoration : underline,
-            ),
-        ),
-        as-link : (
-            link : (
-                color : #ffffff,
-                borderColor : transparent,
-                backgroundColor : transparent,
-                boxShadowColor : transparent,
-                textDecoration : underline,
-            ),
-            hover : (
-                color : #eeeeee,
-                borderColor : transparent,
-                backgroundColor : transparent,
-                boxShadowColor : transparent,
-                textDecoration : none,
+            as-link : (
+                link : (
+                    color : #ffffff,
+                    borderColor : transparent,
+                    backgroundColor : transparent,
+                    boxShadowColor : transparent,
+                    textDecoration : underline,
+                ),
+                hover : (
+                    color : #eeeeee,
+                    borderColor : transparent,
+                    backgroundColor : transparent,
+                    boxShadowColor : transparent,
+                    textDecoration : none,
+                ),
             ),
         ),
     ),

@@ -11,7 +11,6 @@ import {
 } from '@wordpress/block-editor';
 
 import { buttonStyles } from '../../config';
-console.log(buttonStyles);
 
 /**
  * Filter the BlockEdit object and add button color inspector controls to button blocks.
@@ -62,14 +61,11 @@ const retrieveButtonPalette = () => {
 
 		if ( ! buttonStyles.hasOwnProperty( styleKey ) ) continue;
 		const style = buttonStyles[ styleKey ];
-		
-		let displayName = styleKey.replace('button-', '');
-		displayName = displayName.charAt(0).toUpperCase() + displayName.slice(1);
 
 		palette.push( {
-			name: displayName,
-			slug: styleKey,
-			color: style.fill.link.backgroundColor
+			name  : style.label,
+			slug  : 'bs-' + styleKey,
+			color : style.styles.fill.link.backgroundColor
 		} );
 	}
 	return palette ;
