@@ -2,7 +2,7 @@
 /*
 Plugin Name:  Button Styles
 Plugin URI:   https://maxpertici.fr#button-styles
-Description:  Add button styles for Gutenberg buttons.
+Description:  Unified button styles for Gutenberg buttons.
 Version:      0.1.0
 Author:       @maxpertici
 Author URI:   https://maxpertici.fr

@@ -9,11 +9,11 @@ Requires PHP: 8.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add button styles for Gutenberg buttons.
+Unified button styles for Gutenberg buttons
 
 == Description ==
 
-Add button styles for Gutenberg buttons.
+Unified button styles for Gutenberg buttons
 
 == Installation ==
 1. Install the plugin and activate.
