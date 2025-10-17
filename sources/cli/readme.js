@@ -1,6 +1,6 @@
 /**
  * The following files are generated with CLI :
- * — button-styles.build.scss
+ * — button-styles-collection.build.scss
  *
  * Do not edit them manually, they will be overwritten.
  * For adding new styles, please update config.js.
