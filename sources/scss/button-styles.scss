@@ -51,22 +51,14 @@ $states : (
 
             // All colors
             $selector-list: (
-
-                ".wp-block-button:not([class*=is-style]).has-button-color-bs-#{$tint} .wp-block-button__link",
-                ".wp-block-button.is-style-#{$block_style}.has-button-color-bs-#{$tint} .wp-block-button__link",
-
                 ".wp-block-button:not([class*=is-style]).has-button-color-bs-#{$tint} .wp-block-button__link",
                 ".wp-block-button.is-style-#{$block_style}.has-button-color-bs-#{$tint} .wp-block-button__link"
             );
             $selector : list.join( $selector-list, ', ' );
             
-            // Default & Primary color
-            @if( "button-primary" == $tint ) { 
+            // Default & Primary color & default style
+            @if( "primary" == $tint ) { 
                 $selector-list: (
-
-                    ".wp-block-button:not([class*=is-style]) .wp-block-button__link",
-                    ".wp-block-button:not([class*=is-style]).has-button-color-bs-#{$tint} .wp-block-button__link",
-
                     ".wp-block-button:not([class*=is-style]) .wp-block-button__link",
                     ".wp-block-button:not([class*=is-style]).has-button-color-bs-#{$tint} .wp-block-button__link",
                     ".wp-block-button.is-style-#{$block_style} .wp-block-button__link",
@@ -138,7 +130,7 @@ $states : (
             $selector : list.join( $selector-list, ', ' );
             
             // Default & Primary color
-            @if( "button-primary" == $tint ) { 
+            @if( "primary" == $tint ) { 
                 $selector-list: (
                     ".wp-block-button.is-style-#{$block_style} .wp-block-button__link",
                     ".wp-block-button.is-style-#{$block_style}.has-button-color-bs-#{$tint} .wp-block-button__link"
@@ -207,7 +199,7 @@ $states : (
             $selector : list.join( $selector-list, ', ' );
             
             // Default & Primary color
-            @if( "button-primary" == $tint ) { 
+            @if( "primary" == $tint ) { 
                 $selector-list: (
                     ".wp-block-button:not(.has-icon).is-style-#{$block_style} .wp-block-button__link",
                     ".wp-block-button:not(.has-icon).is-style-#{$block_style}.has-button-color-bs-#{$tint} .wp-block-button__link"
