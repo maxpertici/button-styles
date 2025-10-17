@@ -13,7 +13,7 @@ const lightBlackColor = '#333333';
 
 const buttonStyles = {
 
-    "button-black": {
+    "button-primary": {
 
         "fill" : {
 
@@ -71,7 +71,7 @@ const buttonStyles = {
 
     },
 
-    "button-white": {
+    "button-secondary": {
 
         "fill" : {
             "link": {

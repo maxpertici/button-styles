@@ -24,7 +24,7 @@ $button_block_styles : (
 );
 
 $button_styles : (
-    button-black : (
+    button-primary : (
         fill : (
             link : (
                 color : #ffffff,
@@ -74,7 +74,7 @@ $button_styles : (
             ),
         ),
     ),
-    button-white : (
+    button-secondary : (
         fill : (
             link : (
                 color : #111111,

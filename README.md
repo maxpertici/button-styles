@@ -22,8 +22,8 @@ The plugin includes by default:
 - **Link**: Buttons with link appearance
 
 ### Included Colors
-- **Black**: Elegant dark style
-- **White**: Clean and modern style
+- **Primary**: Default black style
+- **Secondary**: Alternative white style
 
 ### Style Structure
 Styles are configured in `/sources/config.js` with the following structure:
