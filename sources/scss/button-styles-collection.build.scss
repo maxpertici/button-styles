@@ -1,0 +1,127 @@
+/**
+ * The following files are generated with CLI :
+ * — button-styles.build.scss
+ *
+ * Do not edit them manually, they will be overwritten.
+ * For adding new styles, please update config.js.
+ * 
+ * Then run the CLI command :
+ * npm run make:styles
+ * and|or
+ * npm run build for the global build command.
+ * 
+ * This comment come from in sources/cli/readme.js
+ * The readme file is here to prevent the deletion of the button files.
+ * His comment will be added to the button-styles files as inline documentation.
+ *
+ * Don't edit readme.js and button-styles-collection.build.scss files.
+ * Cheers!
+ */
+$button_block_styles : (
+    fill,
+    outline,
+    as-link
+);
+
+$button_styles : (
+    button-black : (
+        fill : (
+            link : (
+                color : #ffffff,
+                borderColor : #111111,
+                backgroundColor : #111111,
+                boxShadowColor : #111111,
+                textDecoration : none,
+            ),
+            hover : (
+                color : #ffffff,
+                borderColor : #333333,
+                backgroundColor : #333333,
+                boxShadowColor : #333333,
+                textDecoration : underline,
+            ),
+        ),
+        outline : (
+            link : (
+                color : #111111,
+                borderColor : #111111,
+                backgroundColor : transparent,
+                boxShadowColor : transparent,
+                textDecoration : none,
+            ),
+            hover : (
+                color : #333333,
+                borderColor : #333333,
+                backgroundColor : transparent,
+                boxShadowColor : transparent,
+                textDecoration : underline,
+            ),
+        ),
+        as-link : (
+            link : (
+                color : #111111,
+                borderColor : transparent,
+                backgroundColor : transparent,
+                boxShadowColor : transparent,
+                textDecoration : underline,
+            ),
+            hover : (
+                color : #333333,
+                borderColor : transparent,
+                backgroundColor : transparent,
+                boxShadowColor : transparent,
+                textDecoration : none,
+            ),
+        ),
+    ),
+    button-white : (
+        fill : (
+            link : (
+                color : #111111,
+                borderColor : #ffffff,
+                backgroundColor : #ffffff,
+                boxShadowColor : #ffffff,
+                textDecoration : none,
+            ),
+            hover : (
+                color : #333333,
+                borderColor : #ffffff,
+                backgroundColor : #ffffff,
+                boxShadowColor : #ffffff,
+                textDecoration : underline,
+            ),
+        ),
+        outline : (
+            link : (
+                color : #ffffff,
+                borderColor : #ffffff,
+                backgroundColor : transparent,
+                boxShadowColor : transparent,
+                textDecoration : none,
+            ),
+            hover : (
+                color : #ffffff,
+                borderColor : #ffffff,
+                backgroundColor : transparent,
+                boxShadowColor : transparent,
+                textDecoration : underline,
+            ),
+        ),
+        as-link : (
+            link : (
+                color : #ffffff,
+                borderColor : transparent,
+                backgroundColor : transparent,
+                boxShadowColor : transparent,
+                textDecoration : underline,
+            ),
+            hover : (
+                color : #ffffff,
+                borderColor : transparent,
+                backgroundColor : transparent,
+                boxShadowColor : transparent,
+                textDecoration : none,
+            ),
+        ),
+    ),
+);

@@ -1,0 +1,8 @@
+/**
+ * Global variables configuration for the stylesheets
+ * These variables are used in all stylesheets and must be corretly set in your entry file
+ * By default, the values are set to true for the frontend and false for the admin
+ */
+
+ $wp_front : true  !default ;
+ $wp_admin : false !default ;

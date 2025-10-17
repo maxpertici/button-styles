@@ -1,0 +1,7 @@
+@use "sass:meta";
+@use './config.scss' with (
+    $wp_front: false,
+    $wp_admin: true
+) ;
+
+@include meta.load-css('button-styles.scss');

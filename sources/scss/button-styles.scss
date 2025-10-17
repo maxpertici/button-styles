@@ -1,0 +1,273 @@
+@use 'sass:list';
+@use "sass:map";
+
+@use 'button-styles-collection.build.scss' as * ;
+@use './arrays.scss' as arrays ;
+
+@use 'config.scss' ;
+
+$states : ( 
+    link,
+    hover
+);
+
+@each $block_style in $button_block_styles {
+
+    @each $tint, $config in $button_styles {
+
+        /**
+        *  — — — — — — — — — — —
+        * |                     |
+        * |    GLOBAL STYLES    |
+        * |                     |
+        *  — — — — — — — — — — — 
+        */
+
+        // Base styles
+        :root{
+            // --button-styles--button--padding--vertical   : var( --wp--custom--blocks--button--spacing--padding--top ) ;
+            // --button-styles--button--padding--horizontal : var( --wp--custom--blocks--button--spacing--padding--left ) ;
+        }
+
+        :root :where(.wp-element-button, .wp-block-button__link) {
+           display: inline-flex;
+           // padding : var( --button-styles--button--padding--vertical ) var( --button-styles--button--padding--horizontal ) ;
+           border-width: 1px !important;
+           border-style: solid !important;
+            // overflow: hidden;
+        }
+
+        /**
+        *  — — — — — — — — — — —
+        * |                     |
+        * |    FILL STYLES      |
+        * |                     |
+        *  — — — — — — — — — — — 
+        */
+        @if( "fill" == $block_style ) {
+
+            // — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
+            // FILL SELECTORS
+
+            // All colors
+            $selector-list: (
+
+                ".wp-block-button:not([class*=is-style]).has-button-color--#{$tint} .wp-block-button__link",
+                ".wp-block-button.is-style-#{$block_style}.has-button-color--#{$tint} .wp-block-button__link",
+
+                ".wp-block-button:not([class*=is-style]).has-button-color--#{$tint} .wp-block-button__link",
+                ".wp-block-button.is-style-#{$block_style}.has-button-color--#{$tint} .wp-block-button__link"
+            );
+            $selector : list.join( $selector-list, ', ' );
+            
+            // Default & Primary color
+            @if( "button-primary" == $tint ) { 
+                $selector-list: (
+
+                    ".wp-block-button:not([class*=is-style]) .wp-block-button__link",
+                    ".wp-block-button:not([class*=is-style]).has-button-color--#{$tint} .wp-block-button__link",
+
+                    ".wp-block-button:not([class*=is-style]) .wp-block-button__link",
+                    ".wp-block-button:not([class*=is-style]).has-button-color--#{$tint} .wp-block-button__link",
+                    ".wp-block-button.is-style-#{$block_style} .wp-block-button__link",
+                    ".wp-block-button.is-style-#{$block_style}.has-button-color--#{$tint} .wp-block-button__link"
+                );
+                $selector : list.join( $selector-list, ', ' );
+            }
+
+            // — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
+            // FILL STYLES
+            
+            #{ $selector } {
+
+                @each $state in $states {
+
+                    $styles : map.get( $config, $block_style ) ;
+
+                    $color            : arrays.map-deep-get( $styles, $block_style, $state, color );
+                    $background_color : arrays.map-deep-get( $styles, $block_style, $state, backgroundColor );
+                    $border_color     : arrays.map-deep-get( $styles, $block_style, $state, borderColor );
+                    $box_shadow_color : arrays.map-deep-get( $styles, $block_style, $state, boxShadowColor );
+                    $text_decoration  : arrays.map-deep-get( $styles, $block_style, $state, textDecoration );
+
+                    $css_var_prefix   : --wp--custom--button-styles--#{$block_style}--#{$tint}--#{$state};
+
+                    // Base (without icon)
+                    // :link
+                    @if( "link" == $state ) {
+
+                        color: var( #{$css_var_prefix}--color, #{$color} ) ;
+                        border-color : var( #{$css_var_prefix}--border-color, #{$border_color} ) ;
+                        background-color: var( #{$css_var_prefix}--background-color, #{$background_color} );
+                        text-decoration: var( #{$css_var_prefix}--text-decoration, #{$text_decoration });
+                        
+                    }
+
+                    // :hover (& :focus)
+                    @if( "hover" == $state ) {
+
+                        &:hover,&:focus {
+
+                            color: var( #{$css_var_prefix}--color, #{$color} ) ;
+                            border-color : var( #{$css_var_prefix}--border-color, #{$border_color} ) ;
+                            background-color: var( #{$css_var_prefix}--background-color, #{$background_color} );
+                            text-decoration: var( #{$css_var_prefix}--text-decoration, #{$text_decoration });
+                        }
+                    }
+                }
+            }
+        }
+
+ 
+        /**
+        *  — — — — — — — — — — —
+        * |                     |
+        * |    OUTLINE STYLES   |
+        * |                     |
+        *  — — — — — — — — — — — 
+        */
+        @if( "outline" == $block_style ) {
+
+            // — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
+            // OUTLINE SELECTORS
+            
+            // All colors
+            $selector-list: (
+                ".wp-block-button.is-style-#{$block_style}.has-button-color--#{$tint} .wp-block-button__link"
+            );
+            $selector : list.join( $selector-list, ', ' );
+            
+            // Default & Primary color
+            @if( "button-primary" == $tint ) { 
+                $selector-list: (
+                    ".wp-block-button.is-style-#{$block_style} .wp-block-button__link",
+                    ".wp-block-button.is-style-#{$block_style}.has-button-color--#{$tint} .wp-block-button__link"
+                );
+                $selector : list.join( $selector-list, ', ' );
+            }
+
+            // — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
+            // OUTLINE STYLES
+
+            #{ $selector } {
+
+                @each $state in $states {
+
+                    $styles : map.get( $config, $block_style ) ;
+
+                    $color            : arrays.map-deep-get( $styles, $block_style, $state, color );
+                    $background_color : arrays.map-deep-get( $styles, $block_style, $state, backgroundColor );
+                    $border_color     : arrays.map-deep-get( $styles, $block_style, $state, borderColor );
+                    $box_shadow_color : arrays.map-deep-get( $styles, $block_style, $state, boxShadowColor );
+                    $text_decoration  : arrays.map-deep-get( $styles, $block_style, $state, textDecoration );
+
+                    $css_var_prefix   : --wp--custom--button-styles--#{$block_style}--#{$tint}--#{$state};
+
+                    // :link
+                    @if( "link" == $state ) {
+
+                        color: var( #{$css_var_prefix}--color, #{$color} ) ;
+                        border-color : var( #{$css_var_prefix}--border-color, #{$border_color} ) ;
+                        background-color: var( #{$css_var_prefix}--background-color, #{$background_color} );
+                        text-decoration: var( #{$css_var_prefix}--text-decoration, #{$text_decoration} );
+                    }
+
+                    // :hover (& :focus)
+                    @if( "hover" == $state ) {
+
+                        &:hover,&:focus {
+
+                            color: var( #{$css_var_prefix}--color, #{$color} ) ;
+                            border-color : var( #{$css_var_prefix}--border-color, #{$border_color} ) ;
+                            background-color: var( #{$css_var_prefix}--background-color, #{$background_color} );
+                            text-decoration: var( #{$css_var_prefix}--text-decoration, #{$text_decoration} );
+                        }
+                    }
+                }
+            }
+        }
+
+
+        /**
+        *  — — — — — — — — — — —
+        * |                     |
+        * |    LINK STYLES      |
+        * |                     |
+        *  — — — — — — — — — — — 
+        */
+        @if( "as-link" == $block_style ) {
+
+            // — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
+            // LINK SELECTORS
+
+            // All colors
+            $selector-list: (
+                ".wp-block-button:not(.has-icon).is-style-#{$block_style}.has-button-color--#{$tint} .wp-block-button__link"
+            );
+            $selector : list.join( $selector-list, ', ' );
+            
+            // Default & Primary color
+            @if( "button-primary" == $tint ) { 
+                $selector-list: (
+                    ".wp-block-button:not(.has-icon).is-style-#{$block_style} .wp-block-button__link",
+                    ".wp-block-button:not(.has-icon).is-style-#{$block_style}.has-button-color--#{$tint} .wp-block-button__link"
+                );
+                $selector : list.join( $selector-list, ', ' );
+            }
+
+            // — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
+            // LINK STYLES
+
+            #{ $selector } {
+
+                @each $state in $states {
+
+                    $styles : map.get( $config, $block_style ) ;
+
+                    $color            : arrays.map-deep-get( $styles, $block_style, $state, color );
+                    $background_color : arrays.map-deep-get( $styles, $block_style, $state, backgroundColor );
+                    $border_color     : arrays.map-deep-get( $styles, $block_style, $state, borderColor );
+                    $box_shadow_color : arrays.map-deep-get( $styles, $block_style, $state, boxShadowColor );
+                    $text_decoration  : arrays.map-deep-get( $styles, $block_style, $state, textDecoration );
+
+                    $css_var_prefix   : --wp--custom--button-styles--#{$block_style}--#{$tint}--#{$state};
+
+                    // :link
+                    @if( "link" == $state ) {
+
+                        appearance: none;
+                        border: none;
+                        color: inherit;
+                        font-family: inherit;
+                        padding: 0;
+                        font-size: inherit;
+
+                        position: relative;
+                        display: inline-flex;
+                        align-items: center;
+
+                        color: var( #{$css_var_prefix}--color, #{$color} ) ;
+                        border-color : var( #{$css_var_prefix}--border-color, #{$border_color} ) ;
+                        background-color: var( #{$css_var_prefix}--background-color, #{$background_color} );
+                        text-decoration: var( #{$css_var_prefix}--text-decoration, #{$text_decoration} );
+                    }
+
+                    // :hover (& :focus)
+                    @if( "hover" == $state ) {
+
+                        &:hover,&:focus {
+
+                            color: var( #{$css_var_prefix}--color, #{$color} ) ;
+                            border-color : var( #{$css_var_prefix}--border-color, #{$border_color} ) ;
+                            background-color: var( #{$css_var_prefix}--background-color, #{$background_color} );
+                            text-decoration: var( #{$css_var_prefix}--text-decoration, #{$text_decoration} );
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+

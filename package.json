@@ -1,0 +1,20 @@
+{
+  "name": "button-styles",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "make:styles": "cd sources/cli && node ./styles.js",
+    "watch": "wp-scripts start sources/editor.js sources/front.js --output-path=dist --webpack-devtool=eval-source-map --mode=production --webpack-src-dir=sources --webpack-copy-php --config ./webpack.config.js",
+    "build": "npm run make:styles && wp-scripts build sources/editor.js sources/front.js --output-path=dist --webpack-devtool=eval-source-map --mode=production --webpack-src-dir=sources --webpack-copy-php --stats=minimal --config ./webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/editor": "^14.32.0",
+    "@wordpress/primitives": "^4.32.0",
+    "@wordpress/scripts": "^26.19.0",
+    "classnames": "^2.5.1",
+    "consola": "^3.4.2"
+  }
+}
