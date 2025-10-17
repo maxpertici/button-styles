@@ -42,4 +42,4 @@ To add new styles:
 6. Your custom styles are now available for contributors
 
 ### Note:
-Currently, the default style and default color MUST be "fill" and "primary".
+Currently, the default style and default color IS "fill" and "primary". If your nedd are different, you must adapt scss styles.
