@@ -27,17 +27,8 @@ The plugin includes by default:
 - **Secondary**: Alternative white style
 
 ### Customization
-To add new styles:
-1. Modify the `/sources/config.js` file
-2. Add your new color or style configurations
-3. Run `npm run make:styles` to generate SCSS files
-4. Compile with `npm run build`
-
-### Getting Started
-1. Install and activate the plugin
-2. Modify/add styles in `/sources/config.js`
-3. Follow the same naming and structure conventions as existing styles
-4. Adapt `/sources/scss/button-styles.scss` to your needs
+1. Modify/add styles in `/sources/config.js`
+3. Adapt `/sources/scss/button-styles.scss` to your needs
 5. Run the build process `npm run build`
 6. Your custom styles are now available for contributors
 
