@@ -78,7 +78,7 @@ const ButtonColorSettings = ( { buttonColor, buttonColorName, setAttributes } ) 
 	return (
 		<PanelColorSettings
 			__experimentalIsRenderedInSidebar
-			title={ __( 'Tint' ) }
+			title={ __( 'Color' ) }
 			colors={ customButtonPalette }
 			colorSettings={ [
 				{

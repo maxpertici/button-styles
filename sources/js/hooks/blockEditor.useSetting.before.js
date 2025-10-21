@@ -4,9 +4,22 @@ const customizeButtonSettings = ( settingValue, settingName, clientId, blockName
         if ( blockName !== 'core/button' ) {
             return settingValue;
         }
-        if( settingName === 'color.text' || settingName === 'color.background' || settingName === 'color.custom' ) {
-            return false ;
+
+        const excludeSettings = [
+            'color.text',
+            'color.background',
+            'color.custom',
+            'border.color',
+            'border.radius',
+            'border.style',
+            'border.width',
+            'shadow'
+        ];
+
+        if ( excludeSettings.includes( settingName ) ) {
+            return false;
         }
+
         return settingValue;
 }
 
