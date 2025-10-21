@@ -13,7 +13,13 @@ const customizeButtonSettings = ( settingValue, settingName, clientId, blockName
             'border.radius',
             'border.style',
             'border.width',
-            'shadow'
+            'shadow',
+            'spacing.units',
+            'spacing.spacingSizes.custom',
+            'spacing.spacingSizes.theme',
+            'spacing.spacingSizes.default',
+            'spacing.defaultSpacingSizes',
+            'spacing.padding'
         ];
 
         if ( excludeSettings.includes( settingName ) ) {
