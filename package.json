@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "make:styles": "cd sources/cli && node ./styles.js",
+    "make:zip": "wp-scripts plugin-zip",
     "watch": "wp-scripts start sources/editor.js sources/front.js --output-path=dist --webpack-devtool=eval-source-map --mode=production --webpack-src-dir=sources --webpack-copy-php --config ./webpack.config.js",
     "build": "npm run make:styles && wp-scripts build sources/editor.js sources/front.js --output-path=dist --webpack-devtool=eval-source-map --mode=production --webpack-src-dir=sources --webpack-copy-php --stats=minimal --config ./webpack.config.js"
   },
@@ -16,5 +17,20 @@
     "@wordpress/scripts": "^26.19.0",
     "classnames": "^2.5.1",
     "consola": "^3.4.2"
-  }
+  },
+  "files": [
+    "dist",
+    "app",
+    "vendor",
+    "languages",
+    "package.json",
+    "package-lock.json",
+    "composer.json",
+    "composer.lock",
+    "webpack.config.js",
+    "blueprint.json",
+    "button-styles.php",
+    "readme.txt",
+    "README.md"
+  ]
 }
